@@ -21,7 +21,7 @@
       domain: co.cabreramade.Fig
       key: Foo
 
-- name: read Foo
+- name: delete Foo
   defaults:
       action: delete
       domain: co.cabreramade.Fig
