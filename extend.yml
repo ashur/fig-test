@@ -1,0 +1,7 @@
+# extend
+---
+
+- name: extend
+  command: echo 'this profile extends file-replace'
+
+- extend: file-replace
