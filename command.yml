@@ -1,0 +1,6 @@
+# command
+---
+
+# A command example
+- name: hello
+  command: echo 'hello!'
