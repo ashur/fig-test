@@ -1,12 +1,10 @@
 # defaults
 ---
 
-## Key
-- name: read Foo
+- name: read
   defaults:
       action: read
       domain: co.cabreramade.Fig
-      key: Foo
 
 - name: write Foo=Bar
   defaults:
@@ -15,14 +13,41 @@
       key: Foo
       value: Bar
 
+- name: write Boo=Far
+  defaults:
+      action: write
+      domain: co.cabreramade.Fig
+      key: Boo
+      value: Far
+
 - name: read Foo
   defaults:
       action: read
       domain: co.cabreramade.Fig
       key: Foo
 
+- name: read
+  defaults:
+      action: read
+      domain: co.cabreramade.Fig
+
 - name: delete Foo
   defaults:
       action: delete
       domain: co.cabreramade.Fig
       key: Foo
+
+- name: read
+  defaults:
+      action: read
+      domain: co.cabreramade.Fig
+
+- name: delete Foo
+  defaults:
+      action: delete
+      domain: co.cabreramade.Fig
+
+- name: read
+  defaults:
+      action: read
+      domain: co.cabreramade.Fig
