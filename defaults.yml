@@ -1,0 +1,28 @@
+# defaults
+---
+
+## Key
+- name: read Foo
+  defaults:
+      action: read
+      domain: co.cabreramade.Fig
+      key: Foo
+
+- name: write Foo=Bar
+  defaults:
+      action: write
+      domain: co.cabreramade.Fig
+      key: Foo
+      value: Bar
+
+- name: read Foo
+  defaults:
+      action: read
+      domain: co.cabreramade.Fig
+      key: Foo
+
+- name: read Foo
+  defaults:
+      action: delete
+      domain: co.cabreramade.Fig
+      key: Foo
