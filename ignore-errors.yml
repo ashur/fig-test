@@ -1,0 +1,9 @@
+# ignore_errors
+---
+
+- name: don't ignore errors
+  command: exit 1
+
+- name: ignore errors
+  command: exit 1
+  ignore_errors: true
