@@ -1,0 +1,9 @@
+# ignore_output
+---
+
+- name: don't ignore output
+  command: echo "hello, world."
+
+- name: ignore output
+  command: echo "hello, world."
+  ignore_output: true
