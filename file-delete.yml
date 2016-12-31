@@ -1,0 +1,10 @@
+# file
+---
+
+- name: delete empty file
+  file:
+      delete: ~/Desktop/co.cabreramade.fig-empty.txt
+
+- name: delete 'hello' file
+  file:
+      delete: ~/Desktop/co.cabreramade.fig-hello.txt

@@ -1,0 +1,7 @@
+# file
+---
+
+- name: hello.txt
+  file:
+      replace: ~/Desktop/co.cabreramade.fig-hello.txt
+      source: hello.txt

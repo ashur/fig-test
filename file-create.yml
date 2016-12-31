@@ -1,0 +1,11 @@
+# file
+---
+
+- name: create empty file
+  file:
+      create: ~/Desktop/co.cabreramade.fig-empty.txt
+
+- name: create 'hello' file
+  file:
+      create: ~/Desktop/co.cabreramade.fig-hello.txt
+      contents: "Hello, world."
