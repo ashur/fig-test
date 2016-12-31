@@ -1,0 +1,8 @@
+# vars
+---
+
+- vars:
+    who: world
+
+- name: hello
+  command: echo 'hello, {{ who }}.'

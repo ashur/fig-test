@@ -1,0 +1,7 @@
+# vars
+---
+
+- vars:
+    who: Dolly
+
+- include: vars
