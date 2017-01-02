@@ -1,7 +1,16 @@
 # file
 ---
 
+# Deprecated
 - name: hello.txt
   file:
       replace: ~/Desktop/co.cabreramade.fig-hello.txt
       source: hello.txt
+
+
+# v0.3.0
+- name: hello.txt (v0.3.0)
+  file:
+      action: replace
+      path: ~/Desktop/co.cabreramade.fig-hello-v0.3.0.txt
+      source: hello-v0.3.0.txt

@@ -1,6 +1,7 @@
 # file
 ---
 
+# Deprecated
 - name: delete empty file
   file:
       delete: ~/Desktop/co.cabreramade.fig-empty.txt
@@ -8,3 +9,15 @@
 - name: delete 'hello' file
   file:
       delete: ~/Desktop/co.cabreramade.fig-hello.txt
+
+
+# v0.3.0
+- name: delete empty file (v0.3.0)
+  file:
+      action: delete
+      path: ~/Desktop/co.cabreramade.fig-empty-v0.3.0.txt
+
+- name: delete 'hello' file (v0.3.0)
+  file:
+      action: delete
+      path: ~/Desktop/co.cabreramade.fig-hello-v0.3.0.txt
