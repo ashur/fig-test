@@ -1,5 +1,6 @@
-# include
+# file-all
 ---
 
 - include: file-create
+- include: file-replace
 - include: file-delete
