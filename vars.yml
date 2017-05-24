@@ -2,7 +2,8 @@
 ---
 
 - vars:
+    greetings: hello
     who: world
 
 - name: hello
-  command: echo 'hello, {{ who }}.'
+  command: echo '{{ greetings }}, {{ who }}.'
