@@ -1,0 +1,62 @@
+# syntax
+#
+# Invalid syntax galore. Uncomment a block to test.
+---
+
+## -------------
+## Miscellaneous
+## -------------
+
+# # `include` should be a string
+# - include:
+#     - hello
+
+# # Missing action
+# - name: missing action
+#   defaults:
+#       foo: bar
+
+# # `name` should be a string
+# - name:
+#     - hello
+#     - world
+#   command: echo hello
+
+
+# -------
+# Command
+# -------
+
+# # `command` should be a string, not a list
+# - name: hello
+#   command:
+#       - echo
+#       - hello
+
+# # `command` should be a string, not an unquoted variable
+# - name: hello
+#   command: {{ unquoted_var }}
+
+
+# --------
+# Defaults
+# --------
+
+# # `defaults` should be a YAML sequence
+# - name: defaults as string
+#   defaults: hello
+
+# # `defaults:action` should be a string
+# - name: defaults:action as sequence
+#   defaults:
+#       action:
+#           - read
+
+
+# ----
+# File
+# ----
+
+# # `file` should be a YAML sequence, not a string
+# - name: file as string
+#   file: string
