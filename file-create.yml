@@ -1,25 +1,13 @@
-# file
+# file-create
 ---
 
-# Deprecated
-- name: create empty file
-  file:
-      create: ~/Desktop/co.cabreramade.fig-empty.txt
-
-- name: create 'hello' file
-  file:
-      create: ~/Desktop/co.cabreramade.fig-hello.txt
-      contents: "Hello, world."
-
-
-# v0.3.0
 - name: create empty file
   file:
       action: create
-      path: ~/Desktop/co.cabreramade.fig-empty-v0.3.0.txt
+      path: ~/Desktop/co.cabreramade.fig-empty.txt
 
 - name: create 'hello' file
   file:
       action: create
-      path: ~/Desktop/co.cabreramade.fig-hello-v0.3.0.txt
+      path: ~/Desktop/co.cabreramade.fig-hello.txt
       contents: "Hello, world."
