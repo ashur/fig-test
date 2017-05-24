@@ -1,0 +1,10 @@
+# extend-unknown
+---
+
+# Expected output...
+#
+# Profile 'fig-test/unknown-profile' not found.
+- name: extend
+  command: echo 'this profile extends a non-existent profile'
+
+- extend: unknown-profile
