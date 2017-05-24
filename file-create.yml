@@ -11,3 +11,13 @@
       action: create
       path: ~/Desktop/co.cabreramade.fig-hello.txt
       contents: "Hello, world."
+
+# EXPECTED OUTPUT ----------------------------------------------------------------
+
+# FILE: create | create empty file ***********************************************
+# OK
+#
+# FILE: create | create 'hello' file *********************************************
+# OK
+
+# --------------------------------------------------------------------------------

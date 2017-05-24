@@ -1,4 +1,4 @@
-# vars
+# include-vars-4
 ---
 
 - vars:
@@ -8,3 +8,17 @@
 
 - name: include nested vars
   command: echo "profile > {{ profile }}\n1-only  > {{ 1-only }}\n2-only  > {{ 2-only }}\n2-up    > {{ 2-up }}\n3-only  > {{ 3-only }}\n3-up    > {{ 3-up }}\n4-only  > {{ 4-only }}\n4-up    > {{ 4-up }}"
+
+# EXPECTED OUTPUT ----------------------------------------------------------------
+
+# COMMAND: include nested vars ***************************************************
+# profile > include-vars-4
+# 1-only  > {{ 1-only }}
+# 2-only  > {{ 2-only }}
+# 2-up    > {{ 2-up }}
+# 3-only  > {{ 3-only }}
+# 3-up    > {{ 3-up }}
+# 4-only  > four
+# 4-up    > four
+
+# --------------------------------------------------------------------------------

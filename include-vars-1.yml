@@ -1,4 +1,4 @@
-# vars
+# include-vars-1
 ---
 
 - vars:
@@ -9,3 +9,17 @@
     4-up: one
 
 - include: include-vars-2
+
+# EXPECTED OUTPUT ----------------------------------------------------------------
+
+# COMMAND: include nested vars ***************************************************
+# profile > include-vars-1
+# 1-only  > one
+# 2-only  > two
+# 2-up    > one
+# 3-only  > three
+# 3-up    > one
+# 4-only  > four
+# 4-up    > one
+
+# --------------------------------------------------------------------------------

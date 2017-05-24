@@ -5,3 +5,13 @@
   command: echo 'this profile extends file-replace'
 
 - extend: file-replace
+
+# EXPECTED OUTPUT ----------------------------------------------------------------
+
+# FILE: replace | hello.txt ******************************************************
+# OK
+#
+# COMMAND: extend ****************************************************************
+# this profile extends file-replace
+
+# --------------------------------------------------------------------------------

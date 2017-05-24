@@ -1,7 +1,8 @@
 # include-self
 ---
 
-# Expected output...
-#
-# Profile 'include-self' cannot include itself
 - include: include-self
+
+# EXPECTED OUTPUT ----------------------------------------------------------------
+# fig: Profile 'include-self' cannot include itself
+# --------------------------------------------------------------------------------

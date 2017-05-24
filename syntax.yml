@@ -11,10 +11,18 @@
 # - include:
 #     - hello
 
+# EXPECTED OUTPUT ----------------------------------------------------------------
+# fig: Invalid value for property 'include': ["hello"]
+# --------------------------------------------------------------------------------
+
 # # Missing action
 # - name: missing action
 #   defaults:
 #       foo: bar
+
+# EXPECTED OUTPUT ----------------------------------------------------------------
+# fig: Missing required property 'action'
+# --------------------------------------------------------------------------------
 
 # # `name` should be a string
 # - name:
@@ -22,21 +30,32 @@
 #     - world
 #   command: echo hello
 
+# EXPECTED OUTPUT ----------------------------------------------------------------
+# fig: Invalid value for property 'name': ["hello","world"]
+# --------------------------------------------------------------------------------
+
 
 # -------
 # Command
 # -------
 
-# # `command` should be a string, not a list
+# `command` should be a string, not a list
 # - name: hello
 #   command:
 #       - echo
 #       - hello
 
+# EXPECTED OUTPUT ----------------------------------------------------------------
+# fig: Invalid value for property 'command': ["echo","hello"]
+# --------------------------------------------------------------------------------
+
 # # `command` should be a string, not an unquoted variable
 # - name: hello
 #   command: {{ unquoted_var }}
 
+# EXPECTED OUTPUT ----------------------------------------------------------------
+# fig: Invalid value for property 'command': ["unquoted_var"]
+# --------------------------------------------------------------------------------
 
 # --------
 # Defaults
@@ -46,11 +65,19 @@
 # - name: defaults as string
 #   defaults: hello
 
+# EXPECTED OUTPUT ----------------------------------------------------------------
+# fig: Invalid value for property 'defaults': "hello"
+# --------------------------------------------------------------------------------
+
 # # `defaults:action` should be a string
 # - name: defaults:action as sequence
 #   defaults:
 #       action:
 #           - read
+
+# EXPECTED OUTPUT ----------------------------------------------------------------
+# fig: Invalid value for property 'action': ["read"]
+# --------------------------------------------------------------------------------
 
 
 # ----
@@ -60,3 +87,7 @@
 # # `file` should be a YAML sequence, not a string
 # - name: file as string
 #   file: string
+
+# EXPECTED OUTPUT ----------------------------------------------------------------
+# fig: Invalid value for property 'file': "string"
+# --------------------------------------------------------------------------------

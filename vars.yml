@@ -7,3 +7,10 @@
 
 - name: hello
   command: echo '{{ greetings }}, {{ who }}.'
+
+# EXPECTED OUTPUT -------
+
+# COMMAND: hello *****************************************************************
+# hello, world.
+
+# -----------------------

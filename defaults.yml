@@ -51,3 +51,41 @@
   defaults:
       action: read
       domain: co.cabreramade.Fig
+
+# EXPECTED OUTPUT ----------------------------------------------------------------
+
+# DEFAULTS: read | co.cabreramade.Fig ********************************************
+# 2017-05-24 07:31:16.276 defaults[44905:1006697]
+# Domain co.cabreramade.Fig does not exist
+#
+# DEFAULTS: write | co.cabreramade.Fig Foo ***************************************
+# Bar
+#
+# DEFAULTS: write | co.cabreramade.Fig Boo ***************************************
+# Far
+#
+# DEFAULTS: read | co.cabreramade.Fig Foo ****************************************
+# Bar
+#
+# DEFAULTS: read | co.cabreramade.Fig ********************************************
+# {
+#     Boo = Far;
+#     Foo = Bar;
+# }
+#
+# DEFAULTS: delete | co.cabreramade.Fig Foo **************************************
+# OK
+#
+# DEFAULTS: read | co.cabreramade.Fig ********************************************
+# {
+#     Boo = Far;
+# }
+#
+# DEFAULTS: delete | co.cabreramade.Fig ******************************************
+# OK
+#
+# DEFAULTS: read | co.cabreramade.Fig ********************************************
+# 2017-05-24 07:31:17.129 defaults[44928:1006806]
+# Domain co.cabreramade.Fig does not exist
+
+# --------------------------------------------------------------------------------
