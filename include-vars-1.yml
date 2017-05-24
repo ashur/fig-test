@@ -1,0 +1,11 @@
+# vars
+---
+
+- vars:
+    profile: include-vars-1
+    1-only: one
+    2-up: one
+    3-up: one
+    4-up: one
+
+- include: include-vars-2
