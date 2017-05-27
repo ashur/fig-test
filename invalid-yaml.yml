@@ -1,0 +1,11 @@
+# invalid-yaml
+---
+
+This line is invalid YAML
+
+- name: hello
+  command: echo "hello, world"
+
+# EXPECTED OUTPUT ----------------------------------------------------------------
+# fig: Invalid action found in 'invalid-yaml.yml': "This line is invalid YAML"
+# --------------------------------------------------------------------------------
