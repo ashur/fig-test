@@ -39,7 +39,7 @@
 # Command
 # -------
 
-# `command` should be a string, not a list
+# # `command` should be a string, not a list
 # - name: hello
 #   command:
 #       - echo
