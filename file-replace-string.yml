@@ -1,0 +1,67 @@
+# file-replace-string
+---
+
+- vars:
+    file_path: ~/Desktop/co.cabreramade.fig-replace-string.txt
+    who: my friend
+
+- name: hello, world
+  file:
+      action: create
+      path: "{{ file_path }}"
+      contents: "hello, world."
+
+- name: cat contents
+  command: cat {{ file_path }}
+
+- name: replace "world" with "my friend"
+  file:
+      action: replace_string
+      path: "{{ file_path }}"
+      string:
+          old: "world"
+          new: '{{ who }}'
+
+- name: cat contents again
+  command: cat {{ file_path }}
+
+- name: 'replace "my <word>" with "<word> of mine"'
+  file:
+      action: replace_string
+      path: "{{ file_path }}"
+      string:
+          old: "my (\w+)"
+          new: "\1 of mine"
+
+- name: cat contents again
+  command: cat {{ file_path }}
+
+- name: delete file
+  file:
+      action: delete
+      path: "{{ file_path }}"
+
+# EXPECTED OUTPUT ----------------------------------------------------------------
+
+# FILE: create | hello, world ****************************************************
+# OK
+#
+# COMMAND: cat contents **********************************************************
+# hello, world.
+#
+# FILE: replace_string | replace "world" with "my friend" ************************
+# OK
+#
+# COMMAND: cat contents again ****************************************************
+# hello, my friend.
+#
+# FILE: replace_string | replace "my <word>" with "<word> of mine" ***************
+# OK
+#
+# COMMAND: cat contents again ****************************************************
+# hello, friend of mine.
+#
+# FILE: delete | delete file *****************************************************
+# OK
+
+# --------------------------------------------------------------------------------
